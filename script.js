@@ -92,3 +92,33 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+function downloadPDF() {
+        window.location.href = 'C:/Users/USER/Downloads/Mduduzi%20Sithole.pdf';  // Opens PDF in a new tab
+        // Or use this for download:
+        // window.location.href = 'path/to/your-file.pdf';  // Automatically triggers a download
+    }
+
+    document.getElementById('sendButton').addEventListener('click', function() {
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        // Check if all fields are filled
+        if (name && email && subject && message) {
+            // Here you would typically send the form data to a server via an API or email service
+            // For now, we just show an alert that the message has been sent successfully
+            alert("Message Sent Successfully!");
+
+            // Clear the form after submission (optional)
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        } else {
+            // If any field is empty, show an alert
+            alert("Please fill in all fields before sending.");
+        }
+    });
