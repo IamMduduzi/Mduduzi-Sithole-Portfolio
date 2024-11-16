@@ -763,10 +763,12 @@ textarea {
 @media only screen and (max-width: 900px) {
     .nav-menu-btn {
         display: none;
+        /* Hide the menu button */
     }
 
     .nav-menu.responsive {
         left: 0;
+        /* Show menu */
     }
 
     .nav-menu {
@@ -783,6 +785,8 @@ textarea {
         min-height: 450px;
         height: 100vh;
         transition: 0.3s;
+        z-index: 1000;
+        /* Ensure the nav menu appears above other content */
     }
 
     .nav-menu-list {
@@ -853,10 +857,15 @@ textarea {
         width: 80%;
     }
 
+    /* Fix the dark mode position */
     .dark-mode {
-        display: flex;
-        align-items: center;
-        margin-left: 60%;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin-left: 0;
+        /* Reset previous margin-left */
+        z-index: 1100;
+        /* Ensure it appears above the menu */
     }
 }
 
@@ -877,7 +886,12 @@ textarea {
         width: 100%;
     }
 
+    /* Adjust the dark mode button on smaller screens */
     .dark-mode {
-        margin-left: 50%;
+        top: 15px;
+        right: 15px;
+        /* Position the dark mode button on the top-right */
+        margin-left: 0;
+        /* Ensure no conflict with left margin */
     }
 }
