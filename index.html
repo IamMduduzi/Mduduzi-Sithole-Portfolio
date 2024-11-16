@@ -69,7 +69,7 @@
                     </div>
                     <div class="text-btn">
                         <button class="btn hire-btn">Hire Me</button>
-                        <button class="btn">Download CV<i class="uil uil-file"></i></button>
+                        <button class="btn" onclick="downloadPDF()">Download CV <i class="uil uil-file"></i></button>
                     </div>
                     <div class="social-icons">
                         <div class="icon-circle"></div>
@@ -215,19 +215,19 @@
                     <div class="column">
                         <div class="form-control">
                             <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Your Name">
-                                <input type="text" class="input-field" placeholder="Your Email">
+                                <input type="text" id="name" class="input-field" placeholder="Your Name" required>
+                                <input type="email" id="email" class="input-field" placeholder="Your Email" required>
                             </div>
                             <div class="text-area">
-                                <input type="text" class="input-subject" placeholder="Subject">
-                                <textarea class="text-area-field" placeholder="Message"></textarea>
+                                <input type="text" id="subject" class="input-subject" placeholder="Subject" required>
+                                <textarea id="message" class="text-area-field" placeholder="Message" required></textarea>
                             </div>
                             <div class="form-button">
-                                <button class="btn">
+                                <button type="button" id="sendButton" class="btn">
                                     Send<i class="uil uil-message"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div
                     </div>
                 </div>
             </section>
