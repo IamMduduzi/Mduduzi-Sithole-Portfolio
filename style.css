@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
-
 :root {
     /* Light Mode Variables */
     --body-color: #f5f5f5;
@@ -264,64 +263,6 @@ body.dark #moon {
 
 i {
     font-size: 16px;
-}
-
-/*------- Social Media Icons*/
-
-.social-icons {
-    display: flex;
-    margin-top: 30px;
-    margin-left: 10px;
-    gap: 32px;
-}
-
-.social-icons>.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0px 1px 5px 3px rgb(5, 61, 109);
-}
-
-.icon-circle {
-    position: absolute;
-    transform: transform(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-  
-}
-
-/*------- Featured image*/
-.featured-image {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    min-height: 80vh;
-    width: 100%;
-}
-
-.image {
-    margin-top: 10%;
-    width: 400px;
-    height: 600px;
-    border-radius: 40% 40% 40% 40%;
-    overflow: hidden;
-    animation: imgFloat 5s ease-in-out infinite;
-}
-
-.image img {
-    width: 400px;
-    height: 600px;
-    object-fit: cover;
-}
-
-@keyframes imgFloat {
-    50% {
-        transform: translateY(50px);
-    }
 }
 
 /******************************* Main Section *******************************/
