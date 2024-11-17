@@ -2,49 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI', sans-serif;
 }
 
 :root {
-    --body-color: rgba(250, 250, 250);
-    --color-white: rgba(250, 250, 250);
-    --text-color-second: rgba(38, 37, 37);
-    --first-color: rgba(110, 87, 224);
+    /* Light Mode Variables */
+    --body-color: #f5f5f5;
+    /* Light background */
+    --color-white: #f5f5f5;
+    --text-color: #333333;
+    /* Dark text */
+    --text-color-second: #262626;
+    --first-color: #6e57e0;
+    /* Purple accent */
     --first-shadow: rgba(0, 0, 0, 0.1);
 
     --box-color: #fff;
+    /* Card background */
     --nav-color: #fff;
+    /* Navbar background */
     --nav-icon: #000;
+    /* Navbar icons */
     --logo-color: #000;
-
-    --text-color: #444444;
-    --color-white: #242526;
+    /* Logo color */
 
     --icon-color: #242526;
     --mode-color: #ccc;
-
+    /* Button color for mode switch */
 }
 
 body {
     background-color: var(--body-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 /*----- Dark Mode ------*/
 
 body.dark {
-    --body-color: #202425;
-    --box-color: #fff;
+    --body-color: #1e2024;
+    /* Dark background */
+    --color-white: #242526;
+    --text-color: #e2e2e2;
+    /* Light text */
+    --first-color: #9c61f4;
+    /* Lighter purple accent */
+    --first-shadow: rgba(0, 0, 0, 0.2);
 
-    --nav-color: #262425;
-    --color-white: #fff;
-    --text-color: #fff;
-
+    --nav-color: #2e2e2e;
+    /* Dark navbar */
     --nav-icon: #fff;
+    /* Navbar icons */
     --logo-color: #fff;
-    --icon-color: #8749f2;
+    /* Light logo */
+    --icon-color: #9c61f4;
     --mode-color: #fff;
+    /* Light mode button */
 }
-
 .container {
     width: 100%;
     position: relative;
@@ -94,13 +108,17 @@ nav {
   
 }
 
-.nav-link {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    padding-inline: 15px;
-    margin-inline: 20px;
-}
+/* Hover effect adjustments for mobile */
+  .nav-menu-list li a:hover {
+      background-color: #007bff;
+      color: white;
+  }
+  /* Hover effect on links */
+  .nav-menu-list li a:hover {
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+  }
 
 .nav-menu-btn {
     display: none;
@@ -110,23 +128,6 @@ nav {
     font-size: 32px;
     cursor: pointer;
     color: var(--nav-icon);
-}
-
-.active-link {
-    position: relative;
-    color: var(--first-color);
-    transition: 0.3s;
-}
-
-.active-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 2px;
-    background: var(--first-color);
 }
 
 /*--- Mode ---*/
@@ -758,17 +759,11 @@ textarea {
     }
 }
 
-/********************** Media query = 900px********************************/
+/********************** Media Query = 900px (Tablet) ********************************/
 
 @media only screen and (max-width: 900px) {
-    .nav-menu-btn {
-        display: none;  /* Hide the menu button */
-    }
 
-    .nav-menu.responsive {
-        left: 0;  /* Show menu */
-    }
-
+    /* Adjust navigation for tablet view */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -776,18 +771,16 @@ textarea {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(5px);
+        background: rgba(250, 250, 250, 0.8);
         width: 300px;
-        border-radius: 0px 30px 0px 30px;
-        min-height: 450px;
         height: 100vh;
+        z-index: 1000;
         transition: 0.3s;
-        z-index: 1000; /* Ensure the nav menu appears above other content */
     }
 
     .nav-menu-list {
         flex-direction: column;
+        gap: 30px;
     }
 
     .nav-menu-btn {
@@ -799,19 +792,15 @@ textarea {
     .featured-box {
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: auto;
     }
 
     .featured-text {
         width: 100%;
         order: 2;
         justify-content: center;
-        align-content: flex-start;
         min-height: 60vh;
-    }
-
-    .social-icons {
-        margin-top: 2em;
+        padding: 0 20px;
     }
 
     .featured-image {
@@ -819,7 +808,7 @@ textarea {
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 30px;
     }
 
     .image,
@@ -829,62 +818,274 @@ textarea {
     }
 
     .row {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 50px;
+        gap: 30px;
     }
 
     .column {
-        display: flex;
-        justify-content: center;
         width: 100%;
     }
 
     .about-info,
     .contact-info {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .project-container {
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     .project-box {
-        width: 80%;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    /* Fix the dark mode position */
+    /* Fix the dark mode button on tablet */
     .dark-mode {
         position: absolute;
         top: 20px;
         right: 20px;
-        margin-left: 0; /* Reset previous margin-left */
-        z-index: 1100; /* Ensure it appears above the menu */
+        z-index: 1100;
     }
 }
+/********************** Media Query = 768px (Tablet) ********************************/
 
-@media only screen and (max-width: 540px) {
-    .featured-name {
-        font-size: 40px;
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(250, 250, 250, 0.8);
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        transition: 0.3s;
+    }
+         /* Menu items */
+         .nav-menu-list {
+             flex-direction: column;
+             gap: 20px;
+             list-style: none;
+             padding: 0;
+             margin: 0;
+         }
+        /* When the menu is responsive (open), shift the menu into view */
+        .nav-menu.responsive {
+            left: 0;
+        }
+    .featured-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .featured-text {
+        width: 100%;
+        order: 2;
+        min-height: 60vh;
+        padding: 0 20px;
+    }
+
+    .featured-image {
+        order: 1;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    .image,
+    .image img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .about-info,
+    .contact-info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     .project-box {
         width: 100%;
     }
 
-    .form-inputs {
+    /* Dark Mode Position */
+    .dark-mode {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+    }
+}
+
+/********************** Media Query = 540px (Mobile) ********************************/
+
+@media only screen and (max-width: 540px) {
+
+    /********************** Adjust Navigation for Mobile View ********************************/
+    
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background: rgba(250, 250, 250, 0.8);
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            transition: 0.3s ease-in-out;
+        }
+    
+        /* Menu items */
+        .nav-menu-list {
+            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        /* Hover effect on links */
+        .nav-menu-list li a:hover {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Smooth transition for showing menu items */
+        .nav-menu-list li a {
+            transition: transform 0.3s ease-out;
+        }
+    
+        /* Adjust font size for small mobile screens */
+        @media only screen and (max-width: 540px) {
+            .nav-menu-list li a {
+                font-size: 16px;
+                /* Adjust font size for mobile */
+                padding: 12px 20px;
+            }        
+        }
+                
+        
+                
+
+    .featured-box {
         flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 20px;
     }
 
-    .input-field {
+    .featured-text {
+        width: 100%;
+        order: 2;
+        min-height: 60vh;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .featured-image {
+        order: 1;
+        justify-content: center;
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .image,
+    .image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
         width: 100%;
     }
 
-    /* Adjust the dark mode button on smaller screens */
-    .dark-mode {
-        top: 15px;
-        right: 15px; /* Position the dark mode button on the top-right */
-        margin-left: 0;  /* Ensure no conflict with left margin */
+    .about-info,
+    .contact-info {
+        width: 100%;
+        margin-bottom: 20px;
     }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+    /* Adjust the dark mode button position */
+    .dark-mode {
+        top: 20px;
+        right: 15px;
+        z-index: 1200;
+    }
+
+        /* Adjust social icons for small mobile size */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1rem;
+        }
+                /* Adjust footer font size for mobile */
+                footer {
+                    font-size: 2px;
+                    padding: 12px;
+                    text-align: center;
+                }
+   .footer-menu-list {
+         font-size: 2px;
+     /* Smaller font size for mobile screens */
+        text-align: center;
+    /* Center the footer items for mobile view */
+        margin: 10px 0;
+    }
+        .footer-menu-list a {
+            font-size: 16px;
+        }
+    /* Reduce font size for smaller screens */
+    .featured-name {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+      
 }
