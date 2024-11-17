@@ -30,7 +30,6 @@
     --mode-color: #ccc;
     /* Button color for mode switch */
 }
-
 body {
     background-color: var(--body-color);
     color: var(--text-color);
@@ -39,6 +38,7 @@ body {
 
 /*----- Dark Mode ------*/
 
+/* Dark Mode Variables */
 body.dark {
     --body-color: #1e2024;
     /* Dark background */
@@ -107,8 +107,7 @@ nav {
     position: relative;
   
 }
-
-/* Hover effect adjustments for mobile */
+  /* Hover effect adjustments for mobile */
   .nav-menu-list li a:hover {
       background-color: #007bff;
       color: white;
@@ -120,6 +119,14 @@ nav {
       border-radius: 5px;
   }
 
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+
 .nav-menu-btn {
     display: none;
 }
@@ -129,6 +136,10 @@ nav {
     cursor: pointer;
     color: var(--nav-icon);
 }
+
+
+
+
 
 /*--- Mode ---*/
 
@@ -708,9 +719,9 @@ textarea {
 .footer-menu-list a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
-    font-size: 24px;
-    margin-inline: 40px;
+    font-weight: 400;
+    font-size: 22px;
+    margin-inline: 20px;
     
 }
 
@@ -728,7 +739,7 @@ textarea {
 .social-icons a .icon {
         position: relative;
         color: #262626;
-        transition: 5s;
+        transition: 2s;
         z-index: 3;
 }
         
@@ -738,8 +749,8 @@ textarea {
 }
         
 .bottom-footer {
-    font-size: 26px;
-    color: var(--color-white);
+    font-size: 20px;
+    
     
 }
 
@@ -852,6 +863,7 @@ textarea {
         z-index: 1100;
     }
 }
+
 /********************** Media Query = 768px (Tablet) ********************************/
 
 @media only screen and (max-width: 768px) {
