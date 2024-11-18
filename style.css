@@ -350,7 +350,7 @@ i {
     position: relative;
 }
 
-.about-me .profile-pic {
+.profile-pic {
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
