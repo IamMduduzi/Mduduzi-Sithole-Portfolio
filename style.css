@@ -380,7 +380,7 @@ i {
     position: relative;
 }
 
-.about-info .profile-pic {
+.about-info>.profile-pic {
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
