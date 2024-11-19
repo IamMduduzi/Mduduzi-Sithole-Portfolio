@@ -292,6 +292,36 @@ i {
     border-radius: 50px;
   
 }
+/*------- Featured image*/
+.featured-image {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.image {
+    margin-top: 10%;
+    width: 400px;
+    height: 600px;
+    border-radius: 40% 40% 40% 40%;
+    overflow: hidden;
+    animation: imgFloat 5s ease-in-out infinite;
+}
+
+.image img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
+
+@keyframes imgFloat {
+    50% {
+        transform: translateY(50px);
+    }
+}
+
 
 /******************************* Main Section *******************************/
 
@@ -350,7 +380,7 @@ i {
     position: relative;
 }
 
-.profile-pic {
+.about-info .profile-pic {
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
