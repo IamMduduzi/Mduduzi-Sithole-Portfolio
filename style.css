@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
+
 :root {
     /* Light Mode Variables */
     --body-color: #f5f5f5;
@@ -292,6 +293,7 @@ i {
     border-radius: 50px;
   
 }
+
 /*------- Featured image*/
 .featured-image {
     display: flex;
@@ -321,7 +323,6 @@ i {
         transform: translateY(50px);
     }
 }
-
 
 /******************************* Main Section *******************************/
 
@@ -380,7 +381,7 @@ i {
     position: relative;
 }
 
-.about-info>.profile-pic {
+.profile-pic {
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
@@ -787,12 +788,19 @@ textarea {
         z-index: 1000;
         transition: 0.3s;
     }
+  /* Menu items */
+  .nav-menu-list {
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
 
-    .nav-menu-list {
-        flex-direction: column;
-        gap: 30px;
-    }
-
+  /* When the menu is responsive (open), shift the menu into view */
+  .nav-menu.responsive {
+      left: 0;
+  }
+  
     .nav-menu-btn {
         display: flex;
         justify-content: center;
@@ -857,7 +865,7 @@ textarea {
     /* Fix the dark mode button on tablet */
     .dark-mode {
         position: absolute;
-        top: 20px;
+        top: 25px;
         right: 20px;
         z-index: 1100;
     }
@@ -882,7 +890,7 @@ textarea {
          /* Menu items */
          .nav-menu-list {
              flex-direction: column;
-             gap: 20px;
+             gap: 10px;
              list-style: none;
              padding: 0;
              margin: 0;
@@ -945,8 +953,8 @@ textarea {
     /* Dark Mode Position */
     .dark-mode {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 25px;
+        right: 10px;
         z-index: 1100;
     }
 }
@@ -974,7 +982,7 @@ textarea {
         /* Menu items */
         .nav-menu-list {
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -1061,9 +1069,10 @@ textarea {
 
     /* Adjust the dark mode button position */
     .dark-mode {
-        top: 20px;
+        position: absolute;
+        top: 25px;
         right: 15px;
-        z-index: 1200;
+        z-index: 1000;
     }
 
         /* Adjust social icons for small mobile size */
