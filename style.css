@@ -650,6 +650,7 @@ i {
     padding-inline: 20px;
     border-radius: 10px;
     outline: none;
+    font-size: 18px;
 }
 
 .input-subject {
@@ -661,6 +662,7 @@ i {
     border-radius: 10px;
     outline: none;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 textarea {
@@ -673,6 +675,7 @@ textarea {
     color: var(--text-color);
     outline: none;
     resize: none;
+    font-size: 18px;
 }
 
 .form-button>.btn {
