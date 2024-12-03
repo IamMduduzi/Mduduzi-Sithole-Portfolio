@@ -99,26 +99,27 @@ function downloadPDF() {
         // window.location.href = 'path/to/your-file.pdf';  // Automatically triggers a download
     }
 
-    document.getElementById('sendButton').addEventListener('click', function() {
-        // Get form values
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var subject = document.getElementById('subject').value;
-        var message = document.getElementById('message').value;
+     document.getElementById("sendButton").addEventListener("click", function() {
+        // Get form input values
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var subject = document.getElementById("subject").value.trim();
+        var message = document.getElementById("message").value.trim();
 
-        // Check if all fields are filled
-        if (name && email && subject && message) {
-            // Here you would typically send the form data to a server via an API or email service
-            // For now, we just show an alert that the message has been sent successfully
-            alert("Message Sent Successfully!");
-
-            // Clear the form after submission (optional)
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('subject').value = '';
-            document.getElementById('message').value = '';
-        } else {
-            // If any field is empty, show an alert
-            alert("Please fill in all fields before sending.");
+        // Validation for empty fields
+        if (!name || !email || !subject || !message) {
+            alert("All fields are required!");
+            return; // Stop the form submission if validation fails
         }
+
+        // Validate email format
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop if the email format is invalid
+        }
+
+        // If all validations pass, submit the form (or handle it here)
+        alert("Form submitted successfully!");
+        // You can replace the alert with your form submission logic here (e.g., using AJAX)
     });
