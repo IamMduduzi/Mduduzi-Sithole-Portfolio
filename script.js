@@ -99,27 +99,74 @@ function downloadPDF() {
         // window.location.href = 'path/to/your-file.pdf';  // Automatically triggers a download
     }
 
-     document.getElementById("sendButton").addEventListener("click", function() {
-        // Get form input values
-        var name = document.getElementById("name").value.trim();
-        var email = document.getElementById("email").value.trim();
-        var subject = document.getElementById("subject").value.trim();
-        var message = document.getElementById("message").value.trim();
-
-        // Validation for empty fields
-        if (!name || !email || !subject || !message) {
-            alert("All fields are required!");
-            return; // Stop the form submission if validation fails
+     function validateForm() {
+        // Get form elements
+        var name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var subject = document.getElementById('subject');
+        var message = document.getElementById('message');
+        
+        // Clear previous error messages
+        clearErrorMessages();
+    
+        // Validation flags
+        var valid = true;
+    
+        // Validate name (must not be empty)
+        if (name.value.trim() === "") {
+            showErrorMessage(name, "Please enter your name.");
+            valid = false;
         }
-
-        // Validate email format
-        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return; // Stop if the email format is invalid
+    
+        // Validate email (must not be empty and must be in a valid email format)
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email.value.trim() === "") {
+            showErrorMessage(email, "Please enter your email.");
+            valid = false;
+        } else if (!emailPattern.test(email.value)) {
+            showErrorMessage(email, "Please enter a valid email address.");
+            valid = false;
         }
-
-        // If all validations pass, submit the form (or handle it here)
-        alert("Form submitted successfully!");
-        // You can replace the alert with your form submission logic here (e.g., using AJAX)
-    });
+    
+        // Validate subject (must not be empty)
+        if (subject.value.trim() === "") {
+            showErrorMessage(subject, "Please enter a subject.");
+            valid = false;
+        }
+    
+        // Validate message (must not be empty)
+        if (message.value.trim() === "") {
+            showErrorMessage(message, "Please enter your message.");
+            valid = false;
+        }
+    
+        // If form is valid, submit the form or proceed
+        if (valid) {
+            alert("Form submitted successfully!");
+            // Uncomment this line to actually submit the form
+            // document.getElementById("yourFormId").submit();
+        }
+    
+        return valid; // Return false to prevent form submission if invalid
+    }
+    
+    // Function to show an error message next to an input field
+    function showErrorMessage(inputElement, message) {
+        // Create an error message element
+        var errorMessage = document.createElement('div');
+        errorMessage.classList.add('error-message');
+        errorMessage.style.color = 'red';
+        errorMessage.textContent = message;
+    
+        // Insert the error message after the input field
+        inputElement.parentNode.insertBefore(errorMessage, inputElement.nextSibling);
+    }
+    
+    // Function to clear any previous error messages
+    function clearErrorMessages() {
+        var errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(function (message) {
+            message.remove();
+        });
+    }
+    
