@@ -694,8 +694,13 @@ textarea {
 .form-button i {
     font-size: 18px;
     rotate: -45deg;
-    margin-left: 10px;
-    
+    margin-left: 10px;    
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
 }
 
 /******************************* Footer ********************************/
