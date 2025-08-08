@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mduduzi Sithole | Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="FontAwesome/css/all.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,19 +20,32 @@
             </div>
             <div class="nav-menu" id="myNavMenu">
                 <ul class="nav-menu-list">
-                    <li class="nav-list"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-list"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-list"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-list">
+                        <a href="#home" class="nav-link ">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
                 </ul>
             </div>
 
             <!--Dark Mode-->
+
             <div class="dark-mode">
-                <button class="moon-sun" id="toggle-switch" aria-label="Toggle Dark Mode">
+                <div class="moon-sun" id="toggle-switch">
                     <i class="fa fa-moon" id="moon"></i>
                     <i class="fa fa-sun" id="sun"></i>
-                </button>
+                </div>
             </div>
 
             <div class="nav-menu-btn">
@@ -41,143 +54,226 @@
         </nav>
 
         <!--Main-->
+
         <main class="wrapper">
-            <!-- Hero Section -->
             <section class="featured-box" id="home">
                 <div class="featured-text">
-                    <p class="intro">👋 Hello, I'm</p>
-                    <h1 class="featured-name"><span class="typed-text"></span></h1>
-                    <p class="text-info">A passionate Software Developer who turns ideas into reality through clean, efficient code.</p>
+                    <div class="hello">
+                        <p>Hello, I'm a</p>
+                    </div>
+                    <div class="featured-name">
+                        <span class="typed-text"></span>
+                    </div>
+                    <div class="text-info">
+                        <p>My name is Mduduzi Sithole! I'm a Software Developer.</p>
+                    </div>
                     <div class="text-btn">
-                        <button class="btn" onclick="window.open('./assets/Mduduzi-Sithole.pdf')">
-                            <i class="fa-solid fa-download"></i> Download CV
-                        </button>
-                        <a href="#contact" class="btn secondary"><i class="fa-solid fa-handshake"></i> Let's Talk</a>
+                         <button class="btn"  onclick="window.open('./assets/Mduduzi-Sithole.pdf')">Download CV </button>
                     </div>
                     <div class="social-icons">
-                        <a href="https://www.x.com/" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.whatsapp.com/" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="mailto:jobe970@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="https://www.github.com/" aria-label="GitHub"><i class="uil uil-github"></i></a>
+                        <div class="icon-circle"></div>
+                    <div class="icon"><a href="https://www.x.com/"><i class="fa-brands fa-twitter icon"></i></a></div>
+                    <div class="icon"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook icon"></i></a></div>
+                    <div class="icon"><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin icon"></i></a></div>
+                    <div class="icon"><a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp icon"></i></a></div>
+                    <div class="icon"><a href="mailto:jobe970@gmail.com"> <i class="fa-solid fa-envelope icon"></i></a></div>
+                    <div class="icon"><a href="https://www.github.com/"><i class="uil uil-github icon"></i></a></div>
                     </div>
                 </div>
+
+
                 <div class="featured-image">
                     <div class="image">
-                        <img src="images/Mdu.jpg" alt="Mduduzi Sithole Profile Picture">
+                        <img src="images/Mdu.jpg" alt="mdu">
                     </div>
                 </div>
             </section>
 
-            <!-- About Section -->
+            <!-------------------------------About Section----------------------->
             <section class="section" id="about">
                 <div class="top-header">
                     <h1>About Me</h1>
-                    <p>Who I am and what I do</p>
                 </div>
                 <div class="row">
                     <div class="column">
-                        <figure class="about-me">
-                            <img src="images/Mduduzi.jpeg" class="profile-pic" alt="Mduduzi">
-                            <figcaption>
-                                <h2>Software Developer</h2>
-                                <p>I’m a passionate IT enthusiast with skills in web, mobile, and Power Platform development. I love turning complex problems into elegant solutions while continuously learning and innovating.</p>
-                                <button class="about-me-btn">Hire Me</button>
-                            </figcaption>
-                        </figure>
+                        <div class="about-info">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <img src="images/Mduduzi.jpeg" class="profile-pic" alt="Mduduzi" />
+                                    <h2>Software Developer</h2>
+                                    <p>I’m a passionate IT enthusiast with a strong foundation in Web development, Software development, Mobile development and Power Platform development.
+                                        My curiosity drives me to explore new technologies and find innovative solutions to
+                                        real-world problems. I thrive in collaborative
+                                        environments and love turning complex challenges into elegant code.</p>
+                                </figcaption>
+                            </figure>
+                            <button class="about-me-btn">Hire Me</button>
+                        </div>
                     </div>
+
                     <div class="skill">
-                        <h3>Skills</h3>
-                        <div class="skill-box"><span class="title">HTML</span><span class="skill-per html" data-percent="68"></span></div>
-                        <div class="skill-box"><span class="title">CSS</span><span class="skill-per css" data-percent="57"></span></div>
-                        <div class="skill-box"><span class="title">Dart</span><span class="skill-per dart" data-percent="70"></span></div>
-                        <div class="skill-box"><span class="title">C#</span><span class="skill-per csharp" data-percent="74"></span></div>
-                        <div class="skill-box"><span class="title">Flutter</span><span class="skill-per flutter" data-percent="60"></span></div>
-                        <div class="skill-box"><span class="title">MySQL</span><span class="skill-per mysql" data-percent="55"></span></div>
+                        <div class="skill-box">
+                            <span class="title">HTML</span>
+                            <div class="skill-bar">
+                                <span class="skill-per html">
+                                    <span class="tooltip">68%</span>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="skill-box">
+                            <span class="title">CSS</span>
+                            <div class="skill-bar">
+                                <span class="skill-per css">
+                                    <span class="tooltip">57%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">Dart</span>
+                            <div class="skill-bar">
+                                <span class="skill-per dart">
+                                    <span class="tooltip">70%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">C#</span>
+                            <div class="skill-bar">
+                                <span class="skill-per csharp">
+                                    <span class="tooltip">74%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">Flutter</span>
+                            <div class="skill-bar ">
+                                <span class="skill-per flutter">
+                                    <span class="tooltip">60%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">MYSQL</span>
+                            <div class="skill-bar">
+                                <span class="skill-per mysql">
+                                    <span class="tooltip">55%</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-
-            <!-- Projects Section -->
+            <!-- Project Section -->
             <section class="section" id="projects">
                 <div class="top-header">
                     <h1>Projects</h1>
-                    <p>Some of my work and collaborations</p>
                 </div>
                 <div class="project-container">
                     <div class="project-box">
                         <i class="uil uil-briefcase-alt"></i>
                         <h3>Completed</h3>
-                        <p>3 Finished Projects</p>
+                        <label>3 Finished Projects</label>
                     </div>
+
                     <div class="project-box">
-                        <i class="uil uil-users-alt"></i>
+                        <i class="uil uil-users-alt "></i>
                         <h3>Clients</h3>
-                        <p>Group Projects</p>
+                        <label>Group Projects</label>
                     </div>
+
                     <div class="project-box">
                         <i class="uil uil-award-alt"></i>
                         <h3>Experience</h3>
-                        <p>Beginner</p>
+                        <label>Beginner</label>
                     </div>
-                </div>
+
             </section>
 
-            <!-- Contact Section -->
+            <!-- Contatc Section-->
+
             <section class="section" id="contact">
+
                 <div class="top-header">
                     <h1>Let's Work Together</h1>
-                    <p>Have a project in mind? Drop me a message.</p>
+                    <span>Do you have a project in your mind!! Hit me up</span>
                 </div>
                 <div class="row">
-                    <div class="column contact-info">
-                        <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                        <p><i class="uil uil-envelope"></i> Email: <a href="mailto:jobe970@gmail.com">jobe970@gmail.com</a></p>
-                        <p><i class="uil uil-phone"></i> Phone: <a href="tel:+27710233276">071 0233 276</a></p>
+                    <div class="column">
+                        <div class="contact-info">
+                            <h2>Find Me<i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i>Email: Jobe970@gmail.com</p>
+                            <p><i class="uil uil-phone"></i>Phone: 071 0233 276</p>
+                        </div>
                     </div>
                     <div class="column">
-                        <form class="form-control">
+                        <div class="form-control">
                             <div class="form-inputs">
-                                <input type="text" placeholder="Your Name" required>
-                                <input type="email" placeholder="Your Email" required>
+                                <input type="text" id="name" class="input-field" placeholder="Your Name" required>
+                                <input type="email" id="email" class="input-field" placeholder="Your Email" required>
                             </div>
-                            <input type="text" placeholder="Subject" required>
-                            <textarea placeholder="Message" required></textarea>
-                            <button type="submit" class="btn"><i class="uil uil-message"></i> Send</button>
-                        </form>
+                            <div class="text-area">
+                                <input type="text" id="subject" class="input-subject" placeholder="Subject" required>
+                                <textarea id="message" class="text-area-field" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="button" id="sendButton" class="btn">
+                                    Send<i class="uil uil-message"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-container">
-                <ul class="footer-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.x.com/"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="mailto:jobe970@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.github.com/"><i class="uil uil-github"></i></a>
-                </div>
-                <p class="bottom-footer">© <span id="year"></span> Mduduzi Sithole - All Rights Reserved</p>
-            </div>
-        </footer>
-    </div>
+        <!--- Footer -->
 
+    <section>
+        <footer>
+        <div class="footer-container">
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer-menu-list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <div class="icon"><a href="https://www.x.com/"><i class="fa-brands fa-twitter icon"></i></a></div>
+                <div class="icon"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook icon"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin icon"></i></a></div>
+                <div class="icon"><a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp icon"></i></a></div>
+                <div class="icon"><a href="mailto:jobe970@gmail.com"> <i class="fa-solid fa-envelope icon"></i></a></div>
+                <div class="icon"><a href="https://www.github.com/"><i class="uil uil-github icon"></i></a></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Mduduzi Sithole</a> - All rights reserved
+                    2024</p>
+            </div>
+        </div>
+            
+        </footer>
+
+    </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
 </body>
+
 </html>
